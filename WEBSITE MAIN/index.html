@@ -1,0 +1,1317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E59T4CLSJN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-E59T4CLSJN');
+    </script>
+
+    <title>Resolution Institute - Creating Professionals & Good Human Beings | Nagpur</title>
+    <meta name="description" content="Resolution Institute, Nagpur's trusted name in quality education for 20+ years. JEE, NEET, MH-CET, 11th & 12th Board coaching with personalized guidance.">
+    
+    <!-- Security: Basic Content Security Policy to stop XSS / code injection attacks -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: 'unsafe-inline' 'unsafe-eval'; img-src 'self' data: https:;">
+    
+    <!-- Favicon / Site Icon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png?v=2">
+    <link rel="apple-touch-icon" href="assets/images/favicon.png?v=2">
+    
+    <!-- Social Media / Google Search Preview -->
+    <meta property="og:title" content="Resolution Institute | Nagpur">
+    <meta property="og:description" content="Nagpur's trusted name in quality education for 20+ years. JEE, NEET, MH-CET coaching.">
+    <meta property="og:image" content="assets/images/extracted_img_6.png">
+    <meta property="og:type" content="website">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+
+
+        /* === GLASS PANEL === */
+        .glass-panel {
+            background: rgba(255,255,255,0.03);
+            backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 24px;
+            box-shadow: 0 8px 32px 0 rgba(0,0,0,0.2);
+            transition: transform 0.4s cubic-bezier(0.16,1,0.3,1), background 0.4s ease, border-color 0.4s ease;
+        }
+        .glass-panel:hover {
+            background: rgba(255,255,255,0.05);
+            border-color: rgba(255,255,255,0.15);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #fff 0%, #4ade80 100%);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .btn-glass {
+            background: rgba(255,255,255,0.05); backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.15); border-radius: 9999px;
+            color: white; transition: all 0.3s ease;
+        }
+        .btn-glass:hover {
+            background: rgba(255,255,255,0.15); border-color: rgba(255,255,255,0.3);
+            transform: scale(1.05);
+        }
+
+        .nav-glass {
+            background: rgba(0,0,0,0.5); backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        /* === STAT COUNTER === */
+        .stat-number {
+            font-size: clamp(1.5rem, 5vw, 3.5rem); font-weight: 800;
+            background: linear-gradient(135deg, #34d399, #10b981);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            line-height: 1;
+        }
+
+        /* === STAR RATING === */
+        .star-rating { color: #fbbf24; letter-spacing: 2px; }
+
+        /* === FEATURE ICON BOX === */
+        .feature-icon-box {
+            width: 56px; height: 56px; border-radius: 16px;
+            display: flex; align-items: center; justify-content: center;
+            background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.2);
+            flex-shrink: 0;
+        }
+
+        .lenis.lenis-smooth { scroll-behavior: auto !important; }
+        .lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+        .lenis.lenis-stopped { overflow: hidden; }
+        .lenis.lenis-scrolling iframe { pointer-events: none; }
+
+        /* === TESTIMONIAL CAROUSEL === */
+        .testimonial-carousel { position: relative; }
+        .testimonial-track { display: flex; transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1); }
+        .testimonial-slide { min-width: 100%; padding: 0 16px; box-sizing: border-box; }
+        .carousel-btn {
+            position: absolute; top: 50%; transform: translateY(-50%);
+            width: 48px; height: 48px; border-radius: 50%;
+            background: rgba(255,255,255,0.05); backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.15);
+            color: white; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.3s; z-index: 10;
+        }
+        .carousel-btn:hover { background: rgba(255,255,255,0.15); border-color: rgba(255,255,255,0.3); }
+        .carousel-btn.prev { left: -24px; }
+        .carousel-btn.next { right: -24px; }
+        @media (max-width: 768px) {
+            .carousel-btn.prev { left: 4px; }
+            .carousel-btn.next { right: 4px; }
+            .carousel-btn { width: 36px; height: 36px; }
+        }
+        .carousel-dot {
+            width: 8px; height: 8px; border-radius: 50%;
+            background: rgba(255,255,255,0.2); border: none;
+            cursor: pointer; transition: all 0.3s ease; padding: 0;
+        }
+        .carousel-dot.active { background: #34d399; width: 24px; border-radius: 4px; }
+    </style>
+    <!-- Gradient UI Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="antialiased">
+
+    <!-- ============================================ -->
+    <!-- WebGL Canvas (z-index: 1, fixed)             -->
+    <!-- ============================================ -->
+    <canvas id="webGLApp"></canvas>
+
+
+
+
+    <!-- ============================================ -->
+    <!-- CONTENT OVERLAY (z-index: 10, scrollable)    -->
+    <!-- ============================================ -->
+    <div id="contentOverlay">
+
+
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 nav-glass transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="#home" class="flex items-center gap-4">
+                    <img src="assets/images/extracted_img_1.png" alt="Resolution Institute Logo" class="h-12 w-auto object-contain" />
+                    <div>
+                        <div class="text-xl font-semibold tracking-tight" style="color: #DAA520;">RESOLUTION INSTITUTE</div>
+                        <div class="text-xs text-green-400 font-medium tracking-wide uppercase mt-0.5">Nagpur</div>
+                    </div>
+                </a>
+                <div class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-300">
+                    <a href="#home" class="hover:text-white transition-colors">Home</a>
+                    <a href="#about" class="hover:text-white transition-colors">About Us</a>
+                    <a href="#courses" class="hover:text-white transition-colors">Our Courses</a>
+                    <a href="#reviews" class="hover:text-white transition-colors">Reviews</a>
+                    <a href="#contact" class="hover:text-white transition-colors">Contact Us</a>
+                    <button onclick="openEnquiry()" class="px-5 py-2.5 btn-glass hover:text-white">Enquire Now</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="relative z-10 pt-32 pb-24">
+        <div class="max-w-7xl mx-auto px-6 space-y-32">
+
+            <!-- ============ HERO SECTION ============ -->
+            <section id="home" class="gsap-fade-up min-h-[70vh] flex flex-col justify-center items-center text-center space-y-8">
+                <div class="inline-flex items-center gap-2 px-4 py-2 glass-panel rounded-full text-sm font-medium text-green-300 mb-4">
+                    <span class="relative flex h-2 w-2">
+                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                      <span class="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
+                    </span>
+                    Admissions Open for 2026 Batch
+                </div>
+                <h1 class="text-5xl md:text-7xl font-bold tracking-tighter leading-tight max-w-5xl">
+                    Creating Professionals &amp; <br/><span class="gradient-text">Good Human Beings</span>
+                </h1>
+                <p class="text-xl text-[#e8dcc8] max-w-2xl font-light leading-relaxed">
+                    Nurturing over 5,000+ students across Nagpur for 20+ years. Limited seats available, secure your spot today.
+                </p>
+                <div class="flex gap-4 pt-8">
+                    <button onclick="openEnquiry()" class="px-8 py-4 btn-glass text-lg font-medium flex items-center gap-2">
+                        Get Started <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                    </button>
+                    <a href="#courses" class="px-8 py-4 glass-panel hover:bg-white/10 transition-colors rounded-full text-lg font-medium">Our Courses</a>
+                </div>
+            </section>
+
+            <!-- ============ ABOUT / WELCOME SECTION ============ -->
+            <section id="about" class="gsap-fade-up">
+                <div class="glass-panel p-6 md:p-16 space-y-8">
+                    <div class="text-sm font-semibold text-green-400 uppercase tracking-widest">Welcome to Resolution Institute</div>
+                    <h2 class="text-3xl md:text-5xl font-bold leading-tight max-w-4xl">Nagpur's trusted name in quality education for over <span class="gradient-text">20+ years</span></h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                        <div class="space-y-6 text-[#e8dcc8] text-lg leading-relaxed">
+                            <p>Located in the heart of Bharat Nagar, we are dedicated to creating professionals and good human beings.</p>
+                            <p>Our logo embodies our mission: the <span class="text-green-400 font-medium">green leaves</span> represent the academic growth we nurture, and the <span class="text-green-400 font-medium">three figures</span> symbolize the personalized guidance and deep bond between our mentors and students.</p>
+                            <p>With a legacy of mentoring over <span class="text-white font-semibold">5,000+ students</span>, we don't just teach &mdash; we <span class="text-green-400 font-medium">resolve doubts</span> and <span class="text-green-400 font-medium">shape careers</span>.</p>
+                        </div>
+                        <div class="flex items-center justify-center">
+                            <img src="assets/images/extracted_img_1.png" alt="Resolution Institute Logo" class="w-64 h-64 md:w-[22rem] md:h-[22rem] object-contain opacity-90" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ============ STATS SECTION ============ -->
+            <section class="gsap-fade-up">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <div class="glass-panel p-3 md:p-8 text-center hover:-translate-y-2 transition-transform duration-300">
+                        <div class="stat-number">20+</div>
+                        <div class="text-[#e8dcc8] text-sm mt-2 font-medium">Years of Excellence</div>
+                    </div>
+                    <div class="glass-panel p-3 md:p-8 text-center hover:-translate-y-2 transition-transform duration-300">
+                        <div class="stat-number">5000+</div>
+                        <div class="text-[#e8dcc8] text-sm mt-2 font-medium">Students Mentored</div>
+                    </div>
+                    <div class="glass-panel p-3 md:p-8 text-center hover:-translate-y-2 transition-transform duration-300">
+                        <div class="stat-number">5</div>
+                        <div class="text-[#e8dcc8] text-sm mt-2 font-medium">Specialized Courses</div>
+                    </div>
+                    <div class="glass-panel p-3 md:p-8 text-center hover:-translate-y-2 transition-transform duration-300">
+                        <div class="stat-number">100%</div>
+                        <div class="text-[#e8dcc8] text-sm mt-2 font-medium">Dedication to Students</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ============ WHY CHOOSE US ============ -->
+            <section id="strengths" class="gsap-fade-up space-y-8">
+                <div class="text-center space-y-4 mb-12">
+                    <div class="text-sm font-semibold text-green-400 uppercase tracking-widest">Resolution Institute, Our Strengths</div>
+                    <h2 class="text-4xl md:text-5xl font-bold">Why Choose <span class="gradient-text">Resolution Institute?</span></h2>
+                    <p class="text-[#e8dcc8] text-lg max-w-2xl mx-auto">At Resolution Institute, every student is a priority.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="glass-panel p-8 hover:-translate-y-2 transition-all duration-300 space-y-4">
+                        <div class="feature-icon-box"><i data-lucide="users" class="w-6 h-6 text-green-400"></i></div>
+                        <h3 class="text-xl font-bold text-white">Small Batch Sizes</h3>
+                        <p class="text-[#e8dcc8] text-sm leading-relaxed">Personal attention to every individual &mdash; understanding unique strengths and weaknesses for better outcomes.</p>
+                    </div>
+                    <div class="glass-panel p-8 hover:-translate-y-2 transition-all duration-300 space-y-4">
+                        <div class="feature-icon-box"><i data-lucide="award" class="w-6 h-6 text-green-400"></i></div>
+                        <h3 class="text-xl font-bold text-white">Experienced Faculty</h3>
+                        <p class="text-[#e8dcc8] text-sm leading-relaxed">Learn from the best teachers in Nagpur with decades of teaching experience in competitive exam preparation.</p>
+                    </div>
+                    <div class="glass-panel p-8 hover:-translate-y-2 transition-all duration-300 space-y-4">
+                        <div class="feature-icon-box"><i data-lucide="building-2" class="w-6 h-6 text-green-400"></i></div>
+                        <h3 class="text-xl font-bold text-white">Study-Oriented Environment</h3>
+                        <p class="text-[#e8dcc8] text-sm leading-relaxed">A calm, disciplined atmosphere perfect for focused, distraction-free learning every day.</p>
+                    </div>
+                    <div class="glass-panel p-8 hover:-translate-y-2 transition-all duration-300 space-y-4">
+                        <div class="feature-icon-box"><i data-lucide="book-open" class="w-6 h-6 text-green-400"></i></div>
+                        <h3 class="text-xl font-bold text-white">Comprehensive Study Material</h3>
+                        <p class="text-[#e8dcc8] text-sm leading-relaxed">Well-researched notes and resources tailored specifically for competitive exams and board studies.</p>
+                    </div>
+                    <div class="glass-panel p-8 hover:-translate-y-2 transition-all duration-300 space-y-4">
+                        <div class="feature-icon-box"><i data-lucide="heart-handshake" class="w-6 h-6 text-green-400"></i></div>
+                        <h3 class="text-xl font-bold text-white">Personal Counseling</h3>
+                        <p class="text-[#e8dcc8] text-sm leading-relaxed">Regular guidance sessions to keep students motivated, on track, and confident throughout their journey.</p>
+                    </div>
+                    <div class="glass-panel p-8 hover:-translate-y-2 transition-all duration-300 space-y-4">
+                        <div class="feature-icon-box"><i data-lucide="trending-up" class="w-6 h-6 text-green-400"></i></div>
+                        <h3 class="text-xl font-bold text-white">Student Record Tracking</h3>
+                        <p class="text-[#e8dcc8] text-sm leading-relaxed">Continuous monitoring of student performance to identify growth areas and ensure steady academic progress.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ============ COURSES SECTION ============ -->
+            <section id="courses" class="gsap-fade-up space-y-8">
+                <div class="text-center space-y-4 mb-12">
+                    <div class="text-sm font-semibold text-green-400 uppercase tracking-widest">Our Pathways</div>
+                    <h2 class="text-4xl md:text-5xl font-bold">Academic Offerings</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                    <!-- JEE Card -->
+                    <div class="glass-panel p-6 md:p-10 flex flex-col h-full hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(34,197,94,0.1)] transition-all duration-300 group">
+                        <div class="flex items-start justify-between mb-6">
+                            <div>
+                                <h3 class="text-2xl font-bold text-white mb-2">JEE (Main &amp; Advanced)</h3>
+                                <div class="inline-block px-3 py-1 rounded-full bg-green-500/10 text-green-400 text-sm border border-green-500/20">Engineering Entrance + 11th/12th Board</div>
+                            </div>
+                            <div class="p-4 rounded-2xl bg-white/5 border border-white/10 group-hover:bg-green-500/20 transition-colors">
+                                <i data-lucide="atom" class="w-8 h-8 text-green-400"></i>
+                            </div>
+                        </div>
+                        <div class="flex-grow space-y-5">
+                            <div class="flex items-center gap-3 text-[#e8dcc8] bg-white/5 p-3 rounded-xl border border-white/5">
+                                <i data-lucide="clock" class="w-5 h-5 text-green-400"></i>
+                                <span><span class="text-white font-medium">Duration:</span> 2 Years</span>
+                            </div>
+                            <div class="space-y-3">
+                                <div class="text-xs font-semibold text-[#e8dcc8] uppercase tracking-widest">Subject Groups</div>
+                                <div class="bg-black/20 rounded-xl p-4 border border-white/5 space-y-3">
+                                    <div>
+                                        <div class="text-white font-medium mb-1">Bifocal Group</div>
+                                        <div class="text-[#e8dcc8] text-sm flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-green-500"></i> Physics, Chemistry &amp; Mathematics</div>
+                                    </div>
+                                    <div class="h-px w-full bg-white/5"></div>
+                                    <div>
+                                        <div class="text-white font-medium mb-1">General Science Group</div>
+                                        <div class="text-[#e8dcc8] text-sm flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-green-500"></i> Physics, Chemistry, Mathematics, Biology &amp; English</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pt-2">
+                                <div class="text-xs font-semibold text-[#e8dcc8] uppercase tracking-widest mb-2">Optional Subjects</div>
+                                <div class="text-[#e8dcc8] text-sm leading-relaxed">Computer Science / Electronics / Electrical</div>
+                            </div>
+                        </div>
+                        <div class="mt-8 pt-6 border-t border-white/10">
+                            <button onclick="document.getElementById('enq-course').value='JEE Main &amp; Advanced'; openEnquiry()" class="w-full py-3.5 glass-panel hover:bg-green-500/20 transition-colors rounded-xl text-white font-medium flex items-center justify-center gap-2">
+                                Enquire for This Course <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- NEET Card -->
+                    <div class="glass-panel p-6 md:p-10 flex flex-col h-full hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(34,197,94,0.1)] transition-all duration-300 group">
+                        <div class="flex items-start justify-between mb-6">
+                            <div>
+                                <h3 class="text-2xl font-bold text-white mb-2">NEET (Medical Entrance)</h3>
+                                <div class="inline-block px-3 py-1 rounded-full bg-green-500/10 text-green-400 text-sm border border-green-500/20">Medical Entrance + 11th/12th Board</div>
+                            </div>
+                            <div class="p-4 rounded-2xl bg-white/5 border border-white/10 group-hover:bg-green-500/20 transition-colors">
+                                <i data-lucide="stethoscope" class="w-8 h-8 text-green-400"></i>
+                            </div>
+                        </div>
+                        <div class="flex-grow space-y-5">
+                            <div class="flex items-center gap-3 text-[#e8dcc8] bg-white/5 p-3 rounded-xl border border-white/5">
+                                <i data-lucide="clock" class="w-5 h-5 text-green-400"></i>
+                                <span><span class="text-white font-medium">Duration:</span> 2 Years</span>
+                            </div>
+                            <div class="space-y-3">
+                                <div class="text-xs font-semibold text-[#e8dcc8] uppercase tracking-widest">Subject Groups</div>
+                                <div class="bg-black/20 rounded-xl p-4 border border-white/5 space-y-3">
+                                    <div>
+                                        <div class="text-white font-medium mb-1">Bifocal Group</div>
+                                        <div class="text-[#e8dcc8] text-sm flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-green-500"></i> Physics, Chemistry &amp; Biology</div>
+                                    </div>
+                                    <div class="h-px w-full bg-white/5"></div>
+                                    <div>
+                                        <div class="text-white font-medium mb-1">General Science Group</div>
+                                        <div class="text-[#e8dcc8] text-sm flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-green-500"></i> Physics, Chemistry, Biology, Mathematics &amp; English</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pt-2">
+                                <div class="text-xs font-semibold text-[#e8dcc8] uppercase tracking-widest mb-2">Optional Subjects</div>
+                                <div class="text-[#e8dcc8] text-sm leading-relaxed">Fisheries / Food Science</div>
+                            </div>
+                        </div>
+                        <div class="mt-8 pt-6 border-t border-white/10">
+                            <button onclick="document.getElementById('enq-course').value='NEET'; openEnquiry()" class="w-full py-3.5 glass-panel hover:bg-green-500/20 transition-colors rounded-xl text-white font-medium flex items-center justify-center gap-2">
+                                Enquire for This Course <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- MH-CET Card -->
+                    <div class="glass-panel p-6 md:p-10 flex flex-col h-full hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(34,197,94,0.1)] transition-all duration-300 group">
+                        <div class="flex items-start justify-between mb-6">
+                            <div>
+                                <h3 class="text-2xl font-bold text-white mb-2">MH-CET</h3>
+                                <div class="inline-block px-3 py-1 rounded-full bg-green-500/10 text-green-400 text-sm border border-green-500/20">Maharashtra State CET + 11th/12th Board</div>
+                            </div>
+                            <div class="p-4 rounded-2xl bg-white/5 border border-white/10 group-hover:bg-green-500/20 transition-colors">
+                                <i data-lucide="target" class="w-8 h-8 text-green-400"></i>
+                            </div>
+                        </div>
+                        <div class="flex-grow space-y-5">
+                            <div class="flex items-center gap-3 text-[#e8dcc8] bg-white/5 p-3 rounded-xl border border-white/5">
+                                <i data-lucide="clock" class="w-5 h-5 text-green-400"></i>
+                                <span><span class="text-white font-medium">Duration:</span> 2 Years</span>
+                            </div>
+                            <div class="space-y-3">
+                                <div class="text-xs font-semibold text-[#e8dcc8] uppercase tracking-widest">Subject Groups</div>
+                                <div class="bg-black/20 rounded-xl p-4 border border-white/5 space-y-3">
+                                    <div>
+                                        <div class="text-white font-medium mb-1">Bifocal Group</div>
+                                        <div class="text-[#e8dcc8] text-sm flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-green-500"></i> Physics, Chemistry, Mathematics / Biology</div>
+                                    </div>
+                                    <div class="h-px w-full bg-white/5"></div>
+                                    <div>
+                                        <div class="text-white font-medium mb-1">General Science Group</div>
+                                        <div class="text-[#e8dcc8] text-sm flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-green-500"></i> Physics, Chemistry, Mathematics, Biology &amp; English</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pt-2">
+                                <div class="text-xs font-semibold text-[#e8dcc8] uppercase tracking-widest mb-2">Optional Subjects</div>
+                                <div class="text-[#e8dcc8] text-sm leading-relaxed">Computer Science / Electronics / Electrical / Fisheries / Food Science</div>
+                            </div>
+                        </div>
+                        <div class="mt-8 pt-6 border-t border-white/10">
+                            <button onclick="document.getElementById('enq-course').value='MH-CET'; openEnquiry()" class="w-full py-3.5 glass-panel hover:bg-green-500/20 transition-colors rounded-xl text-white font-medium flex items-center justify-center gap-2">
+                                Enquire for This Course <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- 11th & 12th Boards Card -->
+                    <div class="glass-panel p-6 md:p-10 flex flex-col h-full hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(34,197,94,0.1)] transition-all duration-300 group">
+                        <div class="flex items-start justify-between mb-6">
+                            <div>
+                                <h3 class="text-2xl font-bold text-white mb-2">11th &amp; 12th Boards</h3>
+                                <div class="inline-block px-3 py-1 rounded-full bg-green-500/10 text-green-400 text-sm border border-green-500/20">State / CBSE Curriculum</div>
+                            </div>
+                            <div class="p-4 rounded-2xl bg-white/5 border border-white/10 group-hover:bg-green-500/20 transition-colors">
+                                <i data-lucide="graduation-cap" class="w-8 h-8 text-green-400"></i>
+                            </div>
+                        </div>
+                        <div class="flex-grow space-y-5">
+                            <div class="flex items-center gap-3 text-[#e8dcc8] bg-white/5 p-3 rounded-xl border border-white/5">
+                                <i data-lucide="clock" class="w-5 h-5 text-green-400"></i>
+                                <span><span class="text-white font-medium">Duration:</span> 2 Years</span>
+                            </div>
+                            <div class="space-y-3">
+                                <div class="text-xs font-semibold text-[#e8dcc8] uppercase tracking-widest">Subject Groups</div>
+                                <div class="bg-black/20 rounded-xl p-4 border border-white/5 space-y-3">
+                                    <div>
+                                        <div class="text-white font-medium mb-1">Bifocal Group</div>
+                                        <div class="text-[#e8dcc8] text-sm flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-green-500"></i> Physics, Chemistry, Mathematics / Biology</div>
+                                    </div>
+                                    <div class="h-px w-full bg-white/5"></div>
+                                    <div>
+                                        <div class="text-white font-medium mb-1">General Science Group</div>
+                                        <div class="text-[#e8dcc8] text-sm flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-green-500"></i> Physics, Chemistry, Mathematics, Biology &amp; English</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pt-2">
+                                <div class="text-xs font-semibold text-[#e8dcc8] uppercase tracking-widest mb-2">Optional Subjects</div>
+                                <div class="text-[#e8dcc8] text-sm leading-relaxed">Computer Science / Electronics / Electrical / Fisheries / Food Science</div>
+                            </div>
+                        </div>
+                        <div class="mt-8 pt-6 border-t border-white/10">
+                            <button onclick="document.getElementById('enq-course').value='11th &amp; 12th Boards'; openEnquiry()" class="w-full py-3.5 glass-panel hover:bg-green-500/20 transition-colors rounded-xl text-white font-medium flex items-center justify-center gap-2">
+                                Enquire for This Course <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- ============ STUDENT TESTIMONIALS ============ -->
+            <section id="reviews" class="gsap-fade-up space-y-8">
+                <div class="text-center space-y-4 mb-12">
+                    <div class="text-sm font-semibold text-green-400 uppercase tracking-widest">Student Stories</div>
+                    <h2 class="text-4xl md:text-5xl font-bold">What Our Students Say</h2>
+                </div>
+                <div class="testimonial-carousel">
+                    <div class="overflow-hidden rounded-3xl">
+                        <div id="testimonial-track" class="testimonial-track">
+                            <!-- 1. Mayur -->
+                            <div class="testimonial-slide">
+                                <div class="glass-panel p-8 md:p-12 max-w-3xl mx-auto space-y-6">
+                                    <div class="text-5xl text-green-500/30 font-serif leading-none">&ldquo;</div>
+                                    <p class="text-[#e8dcc8] text-base md:text-lg leading-relaxed italic">The structured study plan and regular progress tracking really helped me stay consistent throughout my preparation. The test analysis showed me exactly where I needed to improve, which made a big difference in my performance.</p>
+                                    <div class="flex items-center gap-4 pt-4 border-t border-white/10">
+                                        <div class="w-12 h-12 rounded-full bg-green-500/20 flex items-center justify-center text-green-400 font-bold">M</div>
+                                        <div>
+                                            <div class="text-white font-semibold">Mayur</div>
+                                            <div class="text-green-400 text-sm font-medium">JEE - 90 Percentile</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 2. Samarth -->
+                            <div class="testimonial-slide">
+                                <div class="glass-panel p-8 md:p-12 max-w-3xl mx-auto space-y-6">
+                                    <div class="text-5xl text-green-500/30 font-serif leading-none">&ldquo;</div>
+                                    <p class="text-[#e8dcc8] text-base md:text-lg leading-relaxed italic">The competitive environment and continuous motivation pushed me to give my best every day. Being surrounded by focused students and getting the right guidance helped me stay disciplined and improve steadily.</p>
+                                    <div class="flex items-center gap-4 pt-4 border-t border-white/10">
+                                        <div class="w-12 h-12 rounded-full bg-green-500/20 flex items-center justify-center text-green-400 font-bold">S</div>
+                                        <div>
+                                            <div class="text-white font-semibold">Samarth</div>
+                                            <div class="text-green-400 text-sm font-medium">NEET - 632/720</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 3. Aryan Shivhare -->
+                            <div class="testimonial-slide">
+                                <div class="glass-panel p-8 md:p-12 max-w-3xl mx-auto space-y-6">
+                                    <div class="text-5xl text-green-500/30 font-serif leading-none">&ldquo;</div>
+                                    <p class="text-[#e8dcc8] text-base md:text-lg leading-relaxed italic">Whenever I faced difficulties, the teachers guided me step by step and made sure I understood the concepts clearly. This constant support helped me build confidence and perform better in exams.</p>
+                                    <div class="flex items-center gap-4 pt-4 border-t border-white/10">
+                                        <div class="w-12 h-12 rounded-full bg-green-500/20 flex items-center justify-center text-green-400 font-bold text-sm">AS</div>
+                                        <div>
+                                            <div class="text-white font-semibold">Aryan Shivhare</div>
+                                            <div class="text-green-400 text-sm font-medium">MH-CET - 93.45%</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 4. Suffi -->
+                            <div class="testimonial-slide">
+                                <div class="glass-panel p-8 md:p-12 max-w-3xl mx-auto space-y-6">
+                                    <div class="text-5xl text-green-500/30 font-serif leading-none">&ldquo;</div>
+                                    <p class="text-[#e8dcc8] text-base md:text-lg leading-relaxed italic">The supportive environment and simple teaching methods made learning much easier for me. Regular practice and revision sessions helped me strengthen my concepts and stay exam-ready.</p>
+                                    <div class="flex items-center gap-4 pt-4 border-t border-white/10">
+                                        <div class="w-12 h-12 rounded-full bg-green-500/20 flex items-center justify-center text-green-400 font-bold">S</div>
+                                        <div>
+                                            <div class="text-white font-semibold">Suffi</div>
+                                            <div class="text-green-400 text-sm font-medium">MH-CET - 93.39%</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 5. Vaibhav Rathod -->
+                            <div class="testimonial-slide">
+                                <div class="glass-panel p-8 md:p-12 max-w-3xl mx-auto space-y-6">
+                                    <div class="text-5xl text-green-500/30 font-serif leading-none">&ldquo;</div>
+                                    <p class="text-[#e8dcc8] text-base md:text-lg leading-relaxed italic">The overall environment here is very positive and focused on growth. From study discipline to proper guidance, everything is well managed. I would definitely recommend others to visit and be a part of this institute.</p>
+                                    <div class="flex items-center gap-4 pt-4 border-t border-white/10">
+                                        <div class="w-12 h-12 rounded-full bg-green-500/20 flex items-center justify-center text-green-400 font-bold text-sm">VR</div>
+                                        <div>
+                                            <div class="text-white font-semibold">Vaibhav Rathod</div>
+                                            <div class="text-green-400 text-sm font-medium">Alumni</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 6. Manoj Tabhane -->
+                            <div class="testimonial-slide">
+                                <div class="glass-panel p-8 md:p-12 max-w-3xl mx-auto space-y-6">
+                                    <div class="text-5xl text-green-500/30 font-serif leading-none">&ldquo;</div>
+                                    <p class="text-[#e8dcc8] text-base md:text-lg leading-relaxed italic">One of the best learning experiences I have had. Regular doubt-solving sessions, personal attention, and proper guidance helped me stay on track and improve continuously.</p>
+                                    <div class="flex items-center gap-4 pt-4 border-t border-white/10">
+                                        <div class="w-12 h-12 rounded-full bg-green-500/20 flex items-center justify-center text-green-400 font-bold text-sm">MT</div>
+                                        <div>
+                                            <div class="text-white font-semibold">Manoj Tabhane</div>
+                                            <div class="text-green-400 text-sm font-medium">Alumni</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Navigation Arrows -->
+                    <button onclick="prevSlide()" class="carousel-btn prev" aria-label="Previous testimonial">
+                        <i data-lucide="chevron-left" class="w-5 h-5"></i>
+                    </button>
+                    <button onclick="nextSlide()" class="carousel-btn next" aria-label="Next testimonial">
+                        <i data-lucide="chevron-right" class="w-5 h-5"></i>
+                    </button>
+                    <!-- Dots -->
+                    <div class="flex justify-center gap-2 mt-8" id="carousel-dots">
+                        <button class="carousel-dot active" onclick="goToSlide(0)" aria-label="Slide 1"></button>
+                        <button class="carousel-dot" onclick="goToSlide(1)" aria-label="Slide 2"></button>
+                        <button class="carousel-dot" onclick="goToSlide(2)" aria-label="Slide 3"></button>
+                        <button class="carousel-dot" onclick="goToSlide(3)" aria-label="Slide 4"></button>
+                        <button class="carousel-dot" onclick="goToSlide(4)" aria-label="Slide 5"></button>
+                        <button class="carousel-dot" onclick="goToSlide(5)" aria-label="Slide 6"></button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ============ COACHING ENVIRONMENT ============ -->
+            <section class="gsap-fade-up space-y-8">
+                <div class="text-center space-y-4 mb-12">
+                    <div class="text-sm font-semibold text-green-400 uppercase tracking-widest">Coaching Environment</div>
+                    <h2 class="text-4xl md:text-5xl font-bold">Our Coaching Environment</h2>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+                    <div class="glass-panel p-8 text-center hover:-translate-y-2 transition-all duration-300 space-y-3">
+                        <div class="mx-auto feature-icon-box"><i data-lucide="users" class="w-6 h-6 text-green-400"></i></div>
+                        <div class="text-white font-semibold text-sm">Small Batch Size</div>
+                    </div>
+                    <div class="glass-panel p-8 text-center hover:-translate-y-2 transition-all duration-300 space-y-3">
+                        <div class="mx-auto feature-icon-box"><i data-lucide="award" class="w-6 h-6 text-green-400"></i></div>
+                        <div class="text-white font-semibold text-sm">Expert Faculty in Action</div>
+                    </div>
+                    <div class="glass-panel p-8 text-center hover:-translate-y-2 transition-all duration-300 space-y-3">
+                        <div class="mx-auto feature-icon-box"><i data-lucide="book-open" class="w-6 h-6 text-green-400"></i></div>
+                        <div class="text-white font-semibold text-sm">Comprehensive Study Material</div>
+                    </div>
+                    <div class="glass-panel p-8 text-center hover:-translate-y-2 transition-all duration-300 space-y-3">
+                        <div class="mx-auto feature-icon-box"><i data-lucide="handshake" class="w-6 h-6 text-green-400"></i></div>
+                        <div class="text-white font-semibold text-sm">Collaborative Learning</div>
+                    </div>
+                    <div class="glass-panel p-8 text-center hover:-translate-y-2 transition-all duration-300 space-y-3">
+                        <div class="mx-auto feature-icon-box"><i data-lucide="brain" class="w-6 h-6 text-green-400"></i></div>
+                        <div class="text-white font-semibold text-sm">Focus &amp; Discipline</div>
+                    </div>
+                    <div class="glass-panel p-8 text-center hover:-translate-y-2 transition-all duration-300 space-y-3">
+                        <div class="mx-auto feature-icon-box"><i data-lucide="lightbulb" class="w-6 h-6 text-green-400"></i></div>
+                        <div class="text-white font-semibold text-sm">Concept Clarity Sessions</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ============ CONTACT & ENQUIRY ============ -->
+            <section id="contact" class="gsap-fade-up grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="glass-panel p-6 md:p-14 flex flex-col justify-between">
+                    <div>
+                        <div class="text-sm font-semibold text-green-400 uppercase tracking-widest mb-4">Connect With Us</div>
+                        <h2 class="text-3xl md:text-5xl font-bold leading-tight mb-8">Location &amp; Contact</h2>
+                        <div class="space-y-6 text-[#e8dcc8]">
+                            <div class="flex gap-4">
+                                <div class="mt-1"><i data-lucide="map-pin" class="w-6 h-6 text-green-500"></i></div>
+                                <div>
+                                    <div class="font-semibold text-white">Address</div>
+                                    <a href="https://www.google.com/maps/search/Resolution+Institute+K-4+Aruvilla+BharatNagar+Nagpur+440033" target="_blank" class="text-sm mt-1 leading-relaxed hover:text-[#DAA520] transition-colors block" style="text-decoration:none;color:inherit;">K-4, Aruvilla, above Punjab National Bank,<br/>Opposite LIT College, Amravati Road,<br/>BharatNagar, Nagpur 440033</a>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="mt-1"><i data-lucide="phone" class="w-6 h-6 text-green-500"></i></div>
+                                <div>
+                                    <div class="font-semibold text-white">Phone</div>
+                                    <a href="tel:09766271792" class="text-sm mt-1 hover:text-green-400 transition-colors inline-block">097662 71792</a>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="mt-1"><i data-lucide="globe" class="w-6 h-6 text-green-500"></i></div>
+                                <div>
+                                    <div class="font-semibold text-white">Official Website</div>
+                                    <a href="https://www.resolutionedu.com" target="_blank" class="text-sm mt-1 hover:text-green-400 transition-colors inline-block">www.resolutionedu.com</a>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="mt-1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="w-6 h-6 text-green-500" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></div>
+                                <div>
+                                    <div class="font-semibold text-white">Instagram</div>
+                                    <a href="https://instagram.com/resolutionnagpur" target="_blank" class="text-sm mt-1 hover:text-green-400 transition-colors inline-block">@resolutionnagpur</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-panel p-6 md:p-14">
+                    <h3 class="text-2xl font-bold text-white mb-6">Send an Enquiry</h3>
+                    <div id="enq-form-wrap" class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-[#e8dcc8] mb-1">Full Name *</label>
+                            <input type="text" id="enq-name" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-green-500/50 transition-colors" placeholder="Your full name" required>
+                        </div>
+                        
+                        <!-- Anti-Bot Honeypot: Hidden from real users. Bots will fill this in. -->
+                        <div style="display:none;" aria-hidden="true">
+                            <label for="enq-website">Website</label>
+                            <input type="text" id="enq-website" name="website" tabindex="-1" autocomplete="off">
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium text-[#e8dcc8] mb-1">Phone *</label>
+                                <input type="tel" id="enq-phone" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-green-500/50 transition-colors" placeholder="+91 XXXXX XXXXX" required>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-[#e8dcc8] mb-1">Email</label>
+                                <input type="email" id="enq-email" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-green-500/50 transition-colors" placeholder="your@email.com">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-[#e8dcc8] mb-1">Course Interest *</label>
+                            <select id="enq-course" class="w-full bg-[#05150f] border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-green-500/50 transition-colors appearance-none">
+                                <option>JEE Main &amp; Advanced</option>
+                                <option>NEET</option>
+                                <option>CUET</option>
+                                <option>MH-CET</option>
+                                <option>11th &amp; 12th Boards</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-[#e8dcc8] mb-1">Message</label>
+                            <textarea id="enq-msg" rows="3" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-green-500/50 transition-colors" placeholder="Any specific questions..."></textarea>
+                        </div>
+                        <button onclick="submitEnquiry(event)" class="w-full py-4 btn-glass rounded-xl text-white font-medium mt-2 hover:text-green-400 transition-colors">
+                            Submit Enquiry
+                        </button>
+                    </div>
+                    <div id="enq-success" style="display:none" class="text-center py-12">
+                        <div class="inline-flex w-16 h-16 rounded-full bg-green-500/20 text-green-400 items-center justify-center mb-4">
+                            <i data-lucide="check" class="w-8 h-8"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-2" id="success-name-msg">Thank You!</h4>
+                        <p class="text-[#e8dcc8]">Our team will reach out to you shortly.</p>
+                        <button onclick="closeEnquiry()" class="mt-8 px-6 py-2 glass-panel text-sm text-white rounded-full">Reset Form</button>
+                    </div>
+                </div>
+            </section>
+
+        </div><!-- end max-w-7xl -->
+    </main>
+
+            <!-- ============ FOOTER ============ -->
+    <footer class="w-full mt-0 bg-black/60 backdrop-blur-md relative z-10">
+        <div class="max-w-7xl mx-auto px-6 py-8 md:py-16">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+                <!-- Logo & Tagline -->
+                <div class="col-span-2 space-y-4">
+                    <div class="flex items-center gap-3">
+                        <img src="assets/images/extracted_img_1.png" alt="Resolution Institute" class="h-12 w-auto object-contain" />
+                        <div>
+                            <div class="text-lg font-bold text-white">RESOLUTION INSTITUTE</div>
+                            <div class="text-xs text-green-400 font-medium uppercase">Nagpur</div>
+                        </div>
+                    </div>
+                    <p class="text-[#e8dcc8] text-sm leading-relaxed max-w-md">Creating Professionals &amp; Good Human Beings. Nurturing over 5,000+ students across Nagpur for 20+ years.</p>
+                    <div class="space-y-2 text-sm text-[#e8dcc8]">
+                        <div class="flex items-start gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0"></i> K-4, Aruvilla, above Punjab National Bank, Opposite LIT College, Amravati Road, BharatNagar, Nagpur 440033</div>
+                        <div class="flex items-center gap-2"><i data-lucide="phone" class="w-4 h-4 text-green-500 flex-shrink-0"></i> 097662 71792</div>
+                    </div>
+                </div>
+                <!-- Quick Links -->
+                <div class="col-span-1">
+                    <h4 class="text-white font-medium text-sm mb-4">Quick Links</h4>
+                    <div class="space-y-2 text-xs">
+                        <a href="#home" class="block text-[#e8dcc8] hover:text-green-400 transition-colors">Home</a>
+                        <a href="#courses" class="block text-[#e8dcc8] hover:text-green-400 transition-colors">Our Courses</a>
+                        <a href="#about" class="block text-[#e8dcc8] hover:text-green-400 transition-colors">About Us</a>
+                        <a href="#reviews" class="block text-[#e8dcc8] hover:text-green-400 transition-colors">Reviews</a>
+                        <a href="#contact" class="block text-[#e8dcc8] hover:text-green-400 transition-colors">Contact Us</a>
+                    </div>
+                </div>
+                <!-- Connect -->
+                <div class="col-span-1">
+                    <h4 class="text-white font-medium text-sm mb-4">Connect With Us</h4>
+                    <div class="space-y-3 text-xs">
+                        <a href="https://instagram.com/resolutionnagpur" target="_blank" class="flex items-center gap-2 text-[#e8dcc8] hover:text-green-400 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                            @resolutionnagpur
+                        </a>
+                        <div>
+                            <a href="https://www.resolutionedu.com" target="_blank" class="flex items-center gap-2 text-[#e8dcc8] hover:text-green-400 transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                                Official Website
+                            </a>
+                            <div class="text-zinc-400 text-xs ml-6 mt-1">www.resolutionedu.com</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-white/5 py-4 md:py-6">
+            <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+                <div class="text-zinc-400 text-sm">&copy; 2026 Resolution Institute, Nagpur. All Rights Reserved.</div>
+                <div class="text-zinc-400 text-sm">Designed by BHARGAV GIRI</div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+
+
+        // === Lenis Smooth Scroll ===
+        const lenis = new Lenis({
+            duration: 1.2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            direction: 'vertical', gestureDirection: 'vertical',
+            smooth: true, mouseMultiplier: 1, smoothTouch: false, touchMultiplier: 2, infinite: false,
+        });
+        function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+        requestAnimationFrame(raf);
+
+        // === GSAP ScrollTrigger Animations ===
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.utils.toArray('.gsap-fade-up').forEach((el) => {
+            gsap.from(el, {
+                scrollTrigger: { trigger: el, start: "top 85%", toggleActions: "play none none reverse" },
+                y: 50, opacity: 0, duration: 0.8, ease: "power3.out"
+            });
+        });
+
+        // === Enquiry Form Functions ===
+        const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzfy_ilRx0mRlwQ6pHGKNKSp9I0WliOSnPR5c2pg0K4BqNhFk3qWVAI80h3lYXRruJB/exec";
+
+        function openEnquiry() {
+            document.getElementById("contact").scrollIntoView({ behavior: 'smooth' });
+            setTimeout(() => { document.getElementById('enq-name').focus(); }, 800);
+        }
+        function closeEnquiry() {
+            document.getElementById("enq-form-wrap").style.display = "";
+            document.getElementById("enq-success").style.display = "none";
+            ['enq-name','enq-phone','enq-email','enq-msg'].forEach(id => document.getElementById(id).value = "");
+        }
+        async function submitEnquiry(event) {
+            const btn = event.currentTarget;
+            const originalText = btn.innerHTML;
+
+            // Anti-Bot Honeypot Check
+            const honeypot = document.getElementById("enq-website").value;
+            if (honeypot) {
+                // Silently reject if bot fills this in
+                console.warn("Bot detected.");
+                return;
+            }
+
+            const name = document.getElementById("enq-name").value.trim();
+            const phone = document.getElementById("enq-phone").value.trim();
+            const email = document.getElementById("enq-email").value.trim();
+            const course = document.getElementById("enq-course").value;
+            const message = document.getElementById("enq-msg").value.trim();
+
+            if (!name || !phone) { alert("Please fill in your name and phone number."); return; }
+
+            // Loading state
+            btn.disabled = true;
+            btn.innerHTML = `<span class="flex items-center justify-center gap-2"><i data-lucide="loader-2" class="w-5 h-5 animate-spin"></i> Sending...</span>`;
+            lucide.createIcons();
+
+            // Prepare data as URL-encoded form data (most reliable for Apps Script)
+            const params = new URLSearchParams();
+            params.append('name', name);
+            params.append('phone', phone);
+            params.append('email', email);
+            params.append('course', course);
+            params.append('message', message);
+
+            try {
+                await fetch(GOOGLE_SCRIPT_URL, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    cache: 'no-cache',
+                    body: params
+                });
+
+                document.getElementById("enq-form-wrap").style.display = "none";
+                document.getElementById("success-name-msg").textContent = "Thank You, " + name + "!";
+                document.getElementById("enq-success").style.display = "block";
+            } catch (error) {
+                console.error('Error!', error.message);
+                // Alert the specific error for mobile debugging
+                alert("Connection Error: " + error.message + "\n\nTip: Try opening this file in Chrome/Safari instead of WhatsApp's viewer.");
+                btn.disabled = false;
+                btn.innerHTML = originalText;
+                lucide.createIcons();
+            }
+        }
+
+        // === Testimonial Carousel ===
+        let currentSlide = 0;
+        const totalSlides = 6;
+        let autoPlayInterval;
+
+        function updateCarousel() {
+            const track = document.getElementById('testimonial-track');
+            if (!track) return;
+            track.style.transform = 'translateX(-' + (currentSlide * 100) + '%)';
+            document.querySelectorAll('.carousel-dot').forEach(function(dot, i) {
+                dot.classList.toggle('active', i === currentSlide);
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateCarousel();
+            resetAutoPlay();
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            updateCarousel();
+            resetAutoPlay();
+        }
+
+        function goToSlide(index) {
+            currentSlide = index;
+            updateCarousel();
+            resetAutoPlay();
+        }
+
+        function resetAutoPlay() {
+            clearInterval(autoPlayInterval);
+            autoPlayInterval = setInterval(nextSlide, 5000);
+        }
+
+        autoPlayInterval = setInterval(nextSlide, 5000);
+
+        // Touch/swipe support for mobile
+        let touchStartX = 0;
+        const carouselEl = document.querySelector('.testimonial-carousel');
+        if (carouselEl) {
+            carouselEl.addEventListener('touchstart', function(e) {
+                touchStartX = e.changedTouches[0].screenX;
+            }, { passive: true });
+            carouselEl.addEventListener('touchend', function(e) {
+                const touchEndX = e.changedTouches[0].screenX;
+                if (touchStartX - touchEndX > 50) nextSlide();
+                else if (touchEndX - touchStartX > 50) prevSlide();
+            }, { passive: true });
+        }
+    </script>
+    </div><!-- End of #contentOverlay -->
+
+    <!-- Custom Cursor -->
+    <div id="custom-cursor"></div>
+    <div id="custom-cursor-follower"></div>
+
+    <script>
+        const cursor = document.getElementById('custom-cursor');
+        const follower = document.getElementById('custom-cursor-follower');
+        
+        let mouseX = 0, mouseY = 0;
+        let followerX = 0, followerY = 0;
+
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            
+            cursor.style.transform = `translate3d(calc(${mouseX}px - 50%), calc(${mouseY}px - 50%), 0)`;
+        });
+
+        // Smooth follow animation for the outer circle
+        function animate() {
+            followerX += (mouseX - followerX) * 0.15;
+            followerY += (mouseY - followerY) * 0.15;
+            
+            follower.style.transform = `translate3d(calc(${followerX}px - 50%), calc(${followerY}px - 50%), 0)`;
+            requestAnimationFrame(animate);
+        }
+        animate();
+
+        // Add hover effects for links and buttons
+        const hoverElements = document.querySelectorAll('a, button, .glass-panel');
+        hoverElements.forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                cursor.classList.add('cursor-hover');
+                follower.classList.add('follower-hover');
+            });
+            el.addEventListener('mouseleave', () => {
+                cursor.classList.remove('cursor-hover');
+                follower.classList.remove('follower-hover');
+            });
+        });
+    </script>
+
+    <!-- Three.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <!-- Inline Liquid Gradient Background -->
+    <script>
+    // ===================================================================
+    // Interactive Liquid Gradient
+    // Architecture: TouchTexture → GradientBackground → App
+    // ===================================================================
+
+    // ===================================================================
+    // TOUCH TEXTURE — records cursor movement into a small canvas texture
+    // ===================================================================
+    class TouchTexture {
+      constructor() {
+        this.size = 64;
+        this.width = 64;
+        this.height = 64;
+        this.maxAge = 120;
+        this.radius = 0.15 * this.size;
+        this.trail = [];
+        this.last = null;
+        this.init();
+      }
+
+      init() {
+        this.canvas = document.createElement("canvas");
+        this.canvas.width = this.width;
+        this.canvas.height = this.height;
+        this.ctx = this.canvas.getContext("2d");
+        this.ctx.fillStyle = "black";
+        this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
+        this.texture = new THREE.Texture(this.canvas);
+      }
+
+      update() {
+        this.clear();
+        for (let i = this.trail.length - 1; i >= 0; i--) {
+          const point = this.trail[i];
+          let f = point.force * (1 - point.age / this.maxAge);
+          point.x += point.vx * f;
+          point.y += point.vy * f;
+          point.age++;
+          if (point.age > this.maxAge) {
+            this.trail.splice(i, 1);
+          } else {
+            this.drawPoint(point);
+          }
+        }
+        this.texture.needsUpdate = true;
+      }
+
+      clear() {
+        this.ctx.fillStyle = "black";
+        this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
+      }
+
+      addTouch(point) {
+        let force = 0, vx = 0, vy = 0;
+        const last = this.last;
+        if (last) {
+          const dx = point.x - last.x;
+          const dy = point.y - last.y;
+          if (dx === 0 && dy === 0) return;
+          const dd = dx * dx + dy * dy;
+          const d = Math.sqrt(dd);
+          vx = dx / d;
+          vy = dy / d;
+          force = Math.min(dd * 20000, 2.0);
+        }
+        this.last = { x: point.x, y: point.y };
+        this.trail.push({ x: point.x, y: point.y, age: 0, force, vx, vy });
+      }
+
+      drawPoint(point) {
+        const pos = { x: point.x * this.width, y: (1 - point.y) * this.height };
+        let intensity = 1;
+        if (point.age < this.maxAge * 0.3) {
+          intensity = Math.sin((point.age / (this.maxAge * 0.3)) * (Math.PI / 2));
+        } else {
+          const t = 1 - (point.age - this.maxAge * 0.3) / (this.maxAge * 0.7);
+          intensity = -t * (t - 2);
+        }
+        intensity *= point.force;
+        const radius = this.radius;
+        const color = `${((point.vx + 1) / 2) * 255}, ${((point.vy + 1) / 2) * 255}, ${intensity * 255}`;
+        const offset = this.size * 5;
+        this.ctx.shadowOffsetX = offset;
+        this.ctx.shadowOffsetY = offset;
+        this.ctx.shadowBlur = radius * 1;
+        this.ctx.shadowColor = `rgba(${color},${0.2 * intensity})`;
+        this.ctx.beginPath();
+        this.ctx.fillStyle = "rgba(255,0,0,1)";
+        this.ctx.arc(pos.x - offset, pos.y - offset, radius, 0, Math.PI * 2);
+        this.ctx.fill();
+      }
+    }
+
+    // ===================================================================
+    // GRADIENT BACKGROUND — full screen plane with shader material
+    // ===================================================================
+    class GradientBackground {
+      constructor(sceneManager) {
+        this.sceneManager = sceneManager;
+        this.mesh = null;
+        this.uniforms = {
+          uTime: { value: 0 },
+          uResolution: { value: new THREE.Vector2(window.innerWidth, window.innerHeight) },
+          uColor1: { value: new THREE.Vector3(0.20, 0.06, 0.30) },
+          uColor2: { value: new THREE.Vector3(0.04, 0.06, 0.18) },
+          uColor3: { value: new THREE.Vector3(0.28, 0.10, 0.32) },
+          uColor4: { value: new THREE.Vector3(0.06, 0.12, 0.28) },
+          uColor5: { value: new THREE.Vector3(0.15, 0.08, 0.25) },
+          uColor6: { value: new THREE.Vector3(0.08, 0.22, 0.35) },
+          uSpeed: { value: 1.2 },
+          uIntensity: { value: 1.8 },
+          uTouchTexture: { value: null },
+          uGrainIntensity: { value: 0.00 },
+          uDarkNavy: { value: new THREE.Vector3(0.04, 0.05, 0.15) },
+          uGradientSize: { value: 1.0 },
+          uColor1Weight: { value: 1.0 },
+          uColor2Weight: { value: 1.0 }
+        };
+      }
+
+      init() {
+        const viewSize = this.sceneManager.getViewSize();
+        const geometry = new THREE.PlaneGeometry(viewSize.width, viewSize.height, 1, 1);
+        const material = new THREE.ShaderMaterial({
+          uniforms: this.uniforms,
+          vertexShader: `
+            varying vec2 vUv;
+            void main() {
+              vec3 pos = position.xyz;
+              gl_Position = projectionMatrix * modelViewMatrix * vec4(pos, 1.);
+              vUv = uv;
+            }
+          `,
+          fragmentShader: `
+            uniform float uTime;
+            uniform vec2 uResolution;
+            uniform vec3 uColor1;
+            uniform vec3 uColor2;
+            uniform vec3 uColor3;
+            uniform vec3 uColor4;
+            uniform vec3 uColor5;
+            uniform vec3 uColor6;
+            uniform float uSpeed;
+            uniform float uIntensity;
+            uniform sampler2D uTouchTexture;
+            uniform float uGrainIntensity;
+            uniform vec3 uDarkNavy;
+            uniform float uGradientSize;
+            uniform float uColor1Weight;
+            uniform float uColor2Weight;
+            varying vec2 vUv;
+            #define PI 3.14159265359
+
+            float grain(vec2 uv, float time) {
+              vec2 grainUv = uv * uResolution * 0.5;
+              float grainValue = fract(sin(dot(grainUv + time, vec2(12.9898, 78.233))) * 43758.5453);
+              return grainValue * 2.0 - 1.0;
+            }
+
+            vec3 getGradientColor(vec2 uv, float time) {
+              float gradientRadius = uGradientSize;
+
+              vec2 center1 = vec2(0.5 + sin(time * uSpeed * 0.4) * 0.4, 0.5 + cos(time * uSpeed * 0.5) * 0.4);
+              vec2 center2 = vec2(0.5 + cos(time * uSpeed * 0.6) * 0.5, 0.5 + sin(time * uSpeed * 0.45) * 0.5);
+              vec2 center3 = vec2(0.5 + sin(time * uSpeed * 0.35) * 0.45, 0.5 + cos(time * uSpeed * 0.55) * 0.45);
+              vec2 center4 = vec2(0.5 + cos(time * uSpeed * 0.5) * 0.4, 0.5 + sin(time * uSpeed * 0.4) * 0.4);
+              vec2 center5 = vec2(0.5 + sin(time * uSpeed * 0.7) * 0.35, 0.5 + cos(time * uSpeed * 0.6) * 0.35);
+              vec2 center6 = vec2(0.5 + cos(time * uSpeed * 0.45) * 0.5, 0.5 + sin(time * uSpeed * 0.65) * 0.5);
+
+              float dist1 = length(uv - center1);
+              float dist2 = length(uv - center2);
+              float dist3 = length(uv - center3);
+              float dist4 = length(uv - center4);
+              float dist5 = length(uv - center5);
+              float dist6 = length(uv - center6);
+
+              float influence1 = 1.0 - smoothstep(0.0, gradientRadius, dist1);
+              float influence2 = 1.0 - smoothstep(0.0, gradientRadius, dist2);
+              float influence3 = 1.0 - smoothstep(0.0, gradientRadius, dist3);
+              float influence4 = 1.0 - smoothstep(0.0, gradientRadius, dist4);
+              float influence5 = 1.0 - smoothstep(0.0, gradientRadius, dist5);
+              float influence6 = 1.0 - smoothstep(0.0, gradientRadius, dist6);
+
+              vec3 color = vec3(0.0);
+              color += uColor1 * influence1 * (0.55 + 0.45 * sin(time * uSpeed)) * uColor1Weight;
+              color += uColor2 * influence2 * (0.55 + 0.45 * cos(time * uSpeed * 1.2)) * uColor2Weight;
+              color += uColor3 * influence3 * (0.55 + 0.45 * sin(time * uSpeed * 0.8)) * uColor1Weight;
+              color += uColor4 * influence4 * (0.55 + 0.45 * cos(time * uSpeed * 1.3)) * uColor2Weight;
+              color += uColor5 * influence5 * (0.55 + 0.45 * sin(time * uSpeed * 1.1)) * uColor1Weight;
+              color += uColor6 * influence6 * (0.55 + 0.45 * cos(time * uSpeed * 0.9)) * uColor2Weight;
+
+              color = pow(color, vec3(0.92));
+              float brightness = length(color);
+              float mixFactor = max(brightness * 1.2, 0.15);
+              color = mix(uDarkNavy, color, mixFactor);
+
+              return color;
+            }
+
+            void main() {
+              vec2 uv = vUv;
+
+              vec4 touchTex = texture2D(uTouchTexture, uv);
+              float vx = -(touchTex.r * 2.0 - 1.0);
+              float vy = -(touchTex.g * 2.0 - 1.0);
+              float intensity = touchTex.b;
+              uv.x += vx * 0.8 * intensity;
+              uv.y += vy * 0.8 * intensity;
+
+              vec3 color = getGradientColor(uv, uTime);
+
+              float grainValue = grain(uv, uTime);
+              color += grainValue * uGrainIntensity;
+
+              gl_FragColor = vec4(color, 1.0);
+            }
+          `
+        });
+        this.mesh = new THREE.Mesh(geometry, material);
+        this.sceneManager.scene.add(this.mesh);
+      }
+
+      update(delta) {
+        if (this.uniforms.uTime) this.uniforms.uTime.value += delta;
+      }
+
+      onResize(width, height) {
+        const viewSize = this.sceneManager.getViewSize();
+        if (this.mesh) {
+          this.mesh.geometry.dispose();
+          this.mesh.geometry = new THREE.PlaneGeometry(viewSize.width, viewSize.height, 1, 1);
+        }
+        if (this.uniforms.uResolution) this.uniforms.uResolution.value.set(width, height);
+      }
+    }
+
+    // ===================================================================
+    // APP — wires renderer, camera, scene, animation loop
+    // ===================================================================
+    class App {
+      constructor() {
+        this.renderer = new THREE.WebGLRenderer({
+          antialias: false,
+          powerPreference: "low-power",
+          alpha: false,
+          stencil: false,
+          depth: false
+        });
+        this.renderer.setSize(window.innerWidth, window.innerHeight);
+        this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.25));
+
+        // Insert canvas as the very first child of body (behind everything)
+        const canvas = this.renderer.domElement;
+        canvas.id = "webGLApp";
+        canvas.style.cssText = "position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none;";
+        document.body.insertBefore(canvas, document.body.firstChild);
+
+        this.camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 10000);
+        this.camera.position.z = 50;
+
+        this.scene = new THREE.Scene();
+        this.scene.background = new THREE.Color(0x0a0e27);
+
+        this.clock = new THREE.Clock();
+
+        this.touchTexture = new TouchTexture();
+        this.gradientBackground = new GradientBackground(this);
+        this.gradientBackground.uniforms.uTouchTexture.value = this.touchTexture.texture;
+
+        this.init();
+      }
+
+      getViewSize() {
+        const fovInRadians = (this.camera.fov * Math.PI) / 180;
+        const height = 2 * Math.tan(fovInRadians / 2) * this.camera.position.z;
+        const width = height * this.camera.aspect;
+        return { width, height };
+      }
+
+      init() {
+        this.gradientBackground.init();
+        this.tick();
+        window.addEventListener("resize", () => this.onResize());
+        window.addEventListener("mousemove", (ev) => this.onMouseMove(ev));
+        window.addEventListener("touchmove", (ev) => this.onTouchMove(ev));
+      }
+
+      onMouseMove(ev) {
+        this.touchTexture.addTouch({
+          x: ev.clientX / window.innerWidth,
+          y: 1 - ev.clientY / window.innerHeight
+        });
+      }
+
+      onTouchMove(ev) {
+        const touch = ev.touches[0];
+        this.onMouseMove({ clientX: touch.clientX, clientY: touch.clientY });
+      }
+
+      tick() {
+        const delta = Math.min(this.clock.getDelta(), 0.1);
+        this.touchTexture.update();
+        this.gradientBackground.update(delta);
+        this.renderer.render(this.scene, this.camera);
+        requestAnimationFrame(() => this.tick());
+      }
+
+      onResize() {
+        this.camera.aspect = window.innerWidth / window.innerHeight;
+        this.camera.updateProjectionMatrix();
+        this.renderer.setSize(window.innerWidth, window.innerHeight);
+        this.gradientBackground.onResize(window.innerWidth, window.innerHeight);
+      }
+    }
+
+    // ===================================================================
+    // SCROLL-BASED NAV STYLING
+    // ===================================================================
+    function initScrollNav() {
+      const nav = document.querySelector("nav");
+      if (!nav) return;
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+          nav.style.background = "rgba(10, 14, 39, 0.65)";
+          nav.style.boxShadow = "0 4px 30px rgba(0,0,0,0.3)";
+        } else {
+          nav.style.background = "rgba(10, 14, 39, 0.45)";
+          nav.style.boxShadow = "none";
+        }
+      });
+    }
+
+    // ===================================================================
+    // MOBILE MENU
+    // ===================================================================
+    function initMobileMenu() {
+      const hamburgerBtn = document.getElementById("mobileMenuBtn");
+      const mobileMenu = document.getElementById("mobileMenuOverlay");
+      const closeBtn = document.getElementById("mobileMenuClose");
+      if (hamburgerBtn && mobileMenu) {
+        hamburgerBtn.addEventListener("click", () => mobileMenu.classList.add("active"));
+        if (closeBtn) closeBtn.addEventListener("click", () => mobileMenu.classList.remove("active"));
+        mobileMenu.querySelectorAll("a").forEach(link => {
+          link.addEventListener("click", () => mobileMenu.classList.remove("active"));
+        });
+      }
+    }
+
+    // ===================================================================
+    // Launch
+    // ===================================================================
+    const gradientApp = new App();
+    document.addEventListener("DOMContentLoaded", () => {
+      initMobileMenu();
+      initScrollNav();
+    });
+    </script>
+</body>
+</html>
